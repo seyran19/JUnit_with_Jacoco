@@ -1,0 +1,15 @@
+Жизненный цикл тестов
+BeforeAll -> BeforeEach -> Test -> AfterEach-> AfterAll
+
+
+/// по умолчанию каждый раз создается новый объект класса для каждого теста
+@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+public class serviceTest {}
+
+/// говорим что создаем 1 объект класса на все наши классы
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class serviceTest {}
+
+Если каждый раз создается новый объект класса для каждого теста, то @BeforeAll и @AfterAll
+должны быть статическими
+А если нет то @BeforeAll и @AfterAll могут быть нестатическими

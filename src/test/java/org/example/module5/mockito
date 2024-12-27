@@ -1,0 +1,6 @@
+классы которые мы мокируем не должны быть файнл инчае будет ексепшн
+мокито по сути просто создает класс и делает exstends от настоящего класса
+переопределяя все методы и возвращая дефолтные значения
+
+Stub -> doReturn(true).when(myService.getUsers())
+Dummy -> doReturn(true).when(meService.getUsers(Mockito.any())
